@@ -11,3 +11,4 @@ Täältä löytyvät ICB705AS3YE-3002 kurssin tehtävät.
 5. [**Tehtävä h5: Alice and Bob**](./tehtava5/)
 6. [**Tehtävä h6: Maturity**](./tehtava6/)
 7. [**Tehtävä h7: SecuDream**](./tehtava7/)
+8. [**Tehtävä h8: Bonus**](./tehtava8/)
