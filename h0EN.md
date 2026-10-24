@@ -1,4 +1,4 @@
-<h1 align="center">h0 / Homework Submissions</h1>
+<h1 align="center">h0 Homework Submissions</h1>
 <div align="right">
 <a href="h0-webpage.md">🇫🇮 Suomeksi</a> |   🇬🇧 In English
 </div>
