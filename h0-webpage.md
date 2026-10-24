@@ -1,5 +1,10 @@
 <h1 align="center">h0 Koulutehtävien palautus</h1>
+<div align="right">
+  <a href="h0EN.md">🇫🇮 Suomeksi</a> | 🇬🇧 In English
+</div>
 
+<h1 align="center">Homework Submissions</h1>
+...
 Täältä löytyvät ICB705AS3YE-3002 kurssin tehtävät.
 
 ### Tehtävät:
