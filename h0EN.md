@@ -1,4 +1,4 @@
-<h1 align="center">h0 Homework Submissions</h1>
+<h1 align="center">🟢h0 Homework Submissions</h1>
 <div align="right">
 <a href="h0-webpage.md">🇫🇮 Suomeksi</a> |   🇬🇧 In English
 </div>
@@ -17,3 +17,5 @@ Here you can find my ICB705AS3YE-3002 course assignments.
 6. [**Assignment h6: Maturity**](./tehtava6/) 🔴 Not started
 7. [**Assignment h7: SecuDream**](./tehtava7/) 🔴 Not started
 8. [**Assignment h8: Bonus**](./tehtava8/) 🔴 Not started
+
+🟢🟡🔴
