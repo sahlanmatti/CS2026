@@ -7,7 +7,7 @@ Täältä löytyvät ICB705AS3YE-3002 kurssin tehtävät.
 
 ### Tehtävät:
 
-1. [**Tehtävä h1: CyberScience**](./tehtava1/)
+1. [**Tehtävä h1: CyberScience**](./h1.pdf/)🟢Valmis
 2. [**Tehtävä h2: Scene**](./tehtava2/) 🔴 Aloittamatta
 3. [**Tehtävä h3: Cyber lab**](./tehtava3/) 🔴 Aloittamatta
 4. [**Tehtävä h4: Feed me**](./tehtava4/) 🔴 Aloittamatta
