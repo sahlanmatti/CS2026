@@ -1,4 +1,4 @@
-<h1 align="center">h0 Koulutehtävien palautus</h1>
+<h1 align="center">🟢 h0 Koulutehtävien palautus</h1>
 <div align="right">
   🇫🇮 Suomeksi |<a href="h0EN.md"> 🇬🇧 In English</a>
 </div>
@@ -16,3 +16,4 @@ Täältä löytyvät ICB705AS3YE-3002 kurssin tehtävät.
 7. [**Tehtävä h7: SecuDream**](./tehtava7/) 🔴 Aloittamatta
 8. [**Tehtävä h8: Bonus**](./tehtava8/) 🔴 Aloittamatta
  
+🟢🟡🔴
