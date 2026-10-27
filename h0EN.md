@@ -9,7 +9,7 @@ Here you can find my ICB705AS3YE-3002 course assignments.
 
 ### Assignments:
 
-1. [**Assignment h1: CyberScience**](./h1.pdf/) 🟢 Ready
+1. [**Assignment h1: CyberScience**](./h1.html/) 🟢 Ready
 2. [**Assignment h2: Scene**](./tehtava2/) 🔴 Not started
 3. [**Assignment h3: Cyber lab**](./tehtava3/) 🔴 Not started
 4. [**Assignment h4: Feed me**](./tehtava4/) 🔴 Not started
