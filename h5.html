@@ -68,12 +68,15 @@
                 <li> Cryptography ensures authentication (verification of the sender), integrity (the message has not been altered) and nonredupidation (the sender cannot deny having sent the message).   </li>
                 <li> Restricted algorithm safety is based on the algorithm that is kept secret itself. As per modern standards these are complete inadequate because they cannot be standardized or publicly tested.</li>            
                 <li> In modern cryptography safety is based fully on the key and large key space. This is why the algorithm it self can be public. </li>
-                <li> Symmetric algorithms use same secret key to encrypt and decrypt so it needs the key beforehand. Public key algorithms (asymmetric) use a public key for encryption and a separate private key to decryption.</li>
+                <li> Symmetric algorithms use same secret key to encrypt and decrypt so it needs the key beforehand. Public key algorithms (asymmetric) use a public key for encryption and a separate private key for decrypting. Based on trap-day one-way functions.</li>
             </ul>
 
             <h3>Schneier (2015) – Applied Cryptography: 2.5 Communications Using Public-Key Cryptography</h3>
             <ul>
-                <li>--</li>
+                <li> As per Diffie & Hellman (1976) public-key cryptography works in principle like a mailbox. Anyone can encrypt using a public key, but only the holder of the private key can decrypt.</li>
+                <li> Parties don't need to agree a secret key in advance - a public key can be sent directly or retrieved from a public database.</li>               
+                <li> Weakness is that public-key encryption is at least 1000 times slower than symmetric encryption and it's volatile to chosen-plaintext attacks.</li> 
+                <li> In hybrid cryptosystems the public-key encryption is used only to transmit a random, one-time session key, which is then used to rapidly encrypt the actual message traffic via a symmetric algorithm.</li>
             </ul>
 
             <h3>Karvinen (2023) – PGP - Send Encrypted and Signed Message - gpg</h3>
