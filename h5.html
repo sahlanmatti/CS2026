@@ -81,7 +81,12 @@
 
             <h3>Karvinen (2023) – PGP - Send Encrypted and Signed Message - gpg</h3>
             <ul>
-                <li>--</li>
+                <li> PGP and command-line tool GPG enable the encryption (confidentiality) and signing (integrity and sender verification) of messages over an insecure network. </li>
+                <li> Both parties generate their own public and private key pair.</li>
+                <li> Public keys are exported into an ASCII format suitable for copying and imported into the other party's keyring. A public key can be transferred even over an unsecured channel.</li>
+                <li> The authenticity of an imported key is verified by comparing its fingerprint, for example over the telephone, after which the key is marked as trusted by signing it.</li>
+                <li> The sender encrypts the message using the recipient's public key and signs it with their own private key. Once encrypted, not even the sender can decrypt the message.</li>
+                <li> The recipient decrypts the message using their own private key, at which point GPG simultaneously verifies the signature using the sender's public key.</li>
             </ul>
         </section>
 
@@ -95,9 +100,9 @@
             <!--<p>Kuvaa tässä valitsemasi työkalu, avainten käyttö eri vaiheissa sekä tietoturva-arvio.</p>-->
 
             <h3>Komentorivitulosteet</h3>
-            <pre><code>$ gpg --version
+            <!-- <pre><code>$ gpg --version
 # Liitä tähän ajamasi komennot ja niiden tulosteet</code></pre>
-        </section>
+        </section> -->
 
         <section id="tehtava-c">
             <h2>c) Password management</h2>
