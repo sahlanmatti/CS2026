@@ -117,22 +117,19 @@
 <figure>
     <img src="GPG3.jpg" alt="Creating of the secret message">
     <figcaption>Picture 3: Creating the encrypted message.</figcaption>
-    <pre><code>$ gpg --gen-key</code></pre>
+    <pre><code>$ echo "Here is a secret message" > message.txt</code></pre>
 </figure>
 
 <figure>
     <img src="GPG4.jpg" alt="Encrypting the message and Content of the encrypted message">
-    <figcaption>Picture 4: Encrypting the message with a public key and checking that it worked.</figcaption>
-</figure>
-
-<figure>
-    <img src="GPG5.jpg" alt="Content of the encrypted message">
-    <figcaption>Picture 5: Encrypted message in ASCII-format.</figcaption>
+    <figcaption>Picture 4: Encrypting the message with a public key and checking that it worked (Encrypted message in ASCII-format).</figcaption>
+    <pre><code>$ gpg --encrypt --armor --recipient name@host.com --output salattu.asc message.txt</code></pre>
 </figure>
 
 <figure>
     <img src="GPG5.jpg" alt="Decrypting the message">
     <figcaption>Picture 5: Decrypt of the message with a private key and the result.</figcaption>
+    <pre><code>$ gpg --decrypt salattu.asc</code></pre>
 </figure>
             <h3>Command line prompts</h3>
             <!-- <pre><code>$ gpg --version
