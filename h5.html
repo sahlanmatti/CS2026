@@ -108,28 +108,28 @@
             <h3>Screenshots</h3>
 
 <figure>
+    <pre><code>$ gpg --gen-key</code></pre>
     <img src="GPG1.jpg" alt="GPG-key pair creation">
     <img src="GPG2.jpg" alt="GPG-key pair creation">
     <figcaption>Picture 1&2: Creating the key pair (gpg --gen-key).</figcaption>
-    <pre><code>$ gpg --gen-key</code></pre>
 </figure>
 
 <figure>
+    <pre><code>$ echo "Here is a secret message" > message.txt</code></pre>
     <img src="GPG3.jpg" alt="Creating of the secret message">
     <figcaption>Picture 3: Creating the encrypted message.</figcaption>
-    <pre><code>$ echo "Here is a secret message" > message.txt</code></pre>
 </figure>
 
 <figure>
+    <pre><code>$ gpg --encrypt --armor --recipient name@host.com --output salattu.asc message.txt</code></pre>
     <img src="GPG4.jpg" alt="Encrypting the message and Content of the encrypted message">
     <figcaption>Picture 4: Encrypting the message with a public key and checking that it worked (Encrypted message in ASCII-format).</figcaption>
-    <pre><code>$ gpg --encrypt --armor --recipient name@host.com --output salattu.asc message.txt</code></pre>
 </figure>
 
 <figure>
+    <pre><code>$ gpg --decrypt salattu.asc</code></pre>
     <img src="GPG5.jpg" alt="Decrypting the message">
     <figcaption>Picture 5: Decrypt of the message with a private key and the result.</figcaption>
-    <pre><code>$ gpg --decrypt salattu.asc</code></pre>
 </figure>
         </section>
         
