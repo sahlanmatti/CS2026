@@ -63,37 +63,44 @@
 
             <h3>Schneier (2015) – Applied Cryptography: 1.1 Terminology</h3>
             <ul>
-                <li> Plaintext is encrypted into ciphertext and then decrypted back into plaintext.</li>
-                <li> Cryptography is protection of messages, cryptanalysis is breaking them. Cryptology is encompassing them both.</li>
-                <li> Cryptography ensures authentication (verification of the sender), integrity (the message has not been altered) and nonredupidation (the sender cannot deny having sent the message).   </li>
-                <li> Restricted algorithm safety is based on the algorithm that is kept secret itself. As per modern standards these are complete inadequate because they cannot be standardized or publicly tested.</li>            
-                <li> In modern cryptography safety is based fully on the key and large key space. This is why the algorithm it self can be public. </li>
-                <li> Symmetric algorithms use same secret key to encrypt and decrypt so it needs the key beforehand. Public key algorithms (asymmetric) use a public key for encryption and a separate private key for decrypting. Based on trap-day one-way functions.</li>
+                <li>Plaintext is encrypted into ciphertext and then decrypted back into plaintext.</li>
+                <li>Cryptography is protection of messages, cryptanalysis is breaking them. Cryptology is encompassing them both.</li>
+                <li>Cryptography ensures authentication (verification of the sender), integrity (the message has not been altered) and nonredupidation (the sender cannot deny having sent the message).   </li>
+                <li>Restricted algorithm safety is based on the algorithm that is kept secret itself. As per modern standards these are complete inadequate because they cannot be standardized or publicly tested.</li>            
+                <li>In modern cryptography safety is based fully on the key and large key space. This is why the algorithm it self can be public. </li>
+                <li>Symmetric algorithms use same secret key to encrypt and decrypt so it needs the key beforehand. Public key algorithms (asymmetric) use a public key for encryption and a separate private key for decrypting. Based on trap-day one-way functions.</li>
             </ul>
 
             <h3>Schneier (2015) – Applied Cryptography: 2.5 Communications Using Public-Key Cryptography</h3>
             <ul>
-                <li> As per Diffie & Hellman (1976) public-key cryptography works in principle like a mailbox. Anyone can encrypt using a public key, but only the holder of the private key can decrypt.</li>
-                <li> Parties don't need to agree a secret key in advance - a public key can be sent directly or retrieved from a public database.</li>               
-                <li> Weakness is that public-key encryption is at least 1000 times slower than symmetric encryption and it's volatile to chosen-plaintext attacks.</li> 
-                <li> In hybrid cryptosystems the public-key encryption is used only to transmit a random, one-time session key, which is then used to rapidly encrypt the actual message traffic via a symmetric algorithm.</li>
+                <li>As per Diffie & Hellman (1976) public-key cryptography works in principle like a mailbox. Anyone can encrypt using a public key, but only the holder of the private key can decrypt.</li>
+                <li>Parties don't need to agree a secret key in advance - a public key can be sent directly or retrieved from a public database.</li>               
+                <li>Weakness is that public-key encryption is at least 1000 times slower than symmetric encryption and it's volatile to chosen-plaintext attacks.</li> 
+                <li>In hybrid cryptosystems the public-key encryption is used only to transmit a random, one-time session key, which is then used to rapidly encrypt the actual message traffic via a symmetric algorithm.</li>
             </ul>
 
             <h3>Karvinen (2023) – PGP - Send Encrypted and Signed Message - gpg</h3>
             <ul>
-                <li> PGP and command-line tool GPG enable the encryption (confidentiality) and signing (integrity and sender verification) of messages over an insecure network. </li>
-                <li> Both parties generate their own public and private key pair.</li>
-                <li> Public keys are exported into an ASCII format suitable for copying and imported into the other party's keyring. A public key can be transferred even over an unsecured channel.</li>
-                <li> The authenticity of an imported key is verified by comparing its fingerprint, for example over the telephone, after which the key is marked as trusted by signing it.</li>
-                <li> The sender encrypts the message using the recipient's public key and signs it with their own private key. Once encrypted, not even the sender can decrypt the message.</li>
-                <li> The recipient decrypts the message using their own private key, at which point GPG simultaneously verifies the signature using the sender's public key.</li>
+                <li>PGP and command-line tool GPG enable the encryption (confidentiality) and signing (integrity and sender verification) of messages over an insecure network. </li>
+                <li>Both parties generate their own public and private key pair.</li>
+                <li>Public keys are exported into an ASCII format suitable for copying and imported into the other party's keyring. A public key can be transferred even over an unsecured channel.</li>
+                <li>The authenticity of an imported key is verified by comparing its fingerprint, for example over the telephone, after which the key is marked as trusted by signing it.</li>
+                <li>The sender encrypts the message using the recipient's public key and signs it with their own private key. Once encrypted, not even the sender can decrypt the message.</li>
+                <li>The recipient decrypts the message using their own private key, at which point GPG simultaneously verifies the signature using the sender's public key.</li>
             </ul>
         </section>
 
         <section id="tehtava-a">
-            <h2>a) Pubkey today</h2>
-          <!--  <p>Kerro tässä, missä olet käyttänyt julkisen avaimen salausta tänään tai eilen, ja selitä miten eri osapuolet käyttävät avaimia eri vaiheissa.</p>
-        </section> -->
+            <h2>a) Pubkey today - my touch</h2>
+                <p>I do research studies on an unnamed website. I use my browser on my pc or on my mobile phone. The connection to the website is secured with HTTPS which relies on TLS (Transport Layer Security). The certification is granted by GoDaddy.</p>
+                <p>So the secure connection involves three parties - me (my browser), the website's server and GoDaddy as the Certificate authority (CA).</p>
+                <ul> 
+                <li>When I connect to the site, the server sent its digital sertificate, which contains the servers public key. GoDaddy had previously verified the site's ownership and signed this certificate using GoDaddy's private Key. My browser verified this signature using GoDaddy's root public key. This confirmed that the public key genuinely belongs to the website. </li>
+                <li>To prove it is legitimate owner of the certificate, the server signed the handshake data using the server's private key. My browser verified this signature using the server's public key extracted from the certificate.</li>
+                <li>Both the browser and the server generated temporary public/private key pairs and exchanged their public keys. By combining the other party's public key with their own private key, both independently computed the exact same symmetric session key without ever transmitting the key itself over the network.</li>
+                <li>Once the handshake was complete, the slower public-key cryptography was no longer used for traffic. All actual web traffic between my browser and the server was encrypted and decrypted using the fast symmetric session key.</li>
+                </ul>
+        </section>
 
         <section id="tehtava-b">
             <h2>b) Encrypt and decrypt a message</h2>
@@ -115,7 +122,7 @@
             <ul>
                 <li>Schneier, B. (2015). <em>Applied Cryptography</em>.</li>
                 <li>Karvinen, T. (2023). <em>PGP - Send Encrypted and Signed Message - gpg</em>.</li>
-                <li>---</li>
+                <li>Cloudfare Learning Center. <em> What happens in a TLS handshake? <a href="https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/" target="_blank" rel="noopener noreferrer"> </em></li>
             </ul>
         </section>
     </main>
